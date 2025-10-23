@@ -1,0 +1,119 @@
+/* =========================================
+   CONTACT.CSS
+   Office Hours + Contact Form section
+========================================= */
+
+/* === WRAPPER LAYOUT === */
+.office-contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* === SHARED BOX STYLES === */
+  .office-contact-wrap .office,
+  .office-contact-wrap .contact-form {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 50px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* === OFFICE BOX === */
+  .office-contact-wrap .office {
+    text-align: center;
+  }
+  
+  .office-contact-wrap .office h4 {
+    margin: 0 0 16px;
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    color: var(--text);
+  }
+  
+  .office-contact-wrap .office p {
+    margin: 10px 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* === CONTACT FORM BOX === */
+  .office-contact-wrap .contact-form h3 {
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+  
+  .office-contact-wrap .contact-form label {
+    display: block;
+    font-size: 15px;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .office-contact-wrap .contact-form input,
+  .office-contact-wrap .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .office-contact-wrap .contact-form input:focus,
+  .office-contact-wrap .contact-form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+  
+  .office-contact-wrap .contact-form button {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .office-contact-wrap .contact-form button:hover {
+    background: rgb(151, 113, 113);
+  }
+  
+  /* === RESPONSIVE DESIGN === */
+  @media (max-width: 900px) {
+    .office-contact-wrap {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 20px;
+    }
+  
+    .office-contact-wrap .office,
+    .office-contact-wrap .contact-form {
+      padding: 30px 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .office-contact-wrap .office h4,
+    .office-contact-wrap .contact-form h3 {
+      font-size: 1.5rem;
+    }
+  }

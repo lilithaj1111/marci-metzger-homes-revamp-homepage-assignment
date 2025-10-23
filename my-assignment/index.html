@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marci Metzger Homes — Revamp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+
+  <!-- Font Awesome for social icons (replace 'yourkit' with your kit id or use CDN) -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="left-controls">
+        <button class="hamburger" aria-label="Open menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>        
+        <img src="images/hero-placeholder.png" alt="Marci Metzger Homes" class="logo-img">
+      </div>
+    </div>
+  </header>  
+
+  <section class="hero" id="hero">
+    <div class="hero-bg" style="background-image:url('images/hero-bg.jpg')"></div>
+    <div class="hero-inner container">
+      <div class="kicker">MARCI METZGER - THE RIDGE REALTY GROUP</div>
+      <div class="hero-title">Pahrump Realtor</div>
+      <div class="hero-sub">Find the perfect place to call home</div>
+      <button class="call-now" id="callNow">CALL NOW</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="about">
+      <div class="marci-photo">
+        <img src="images/marci-photo.png" alt="Marci Metzger" style="width:100%;height:auto;border-radius:12px">
+      </div>
+      <div class="about-text">
+        <h3>MARCI METZGER — REALTOR FOR NEARLY 3 DECADES</h3>
+        <p>Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.</p>
+        <p>Whether you're preparing to sell, buy, or invest — our team provides market analysis, upgrade lists, contractors on speed dial, and expert negotiation to get you the best outcome.</p>
+      </div>
+    </section>
+
+    <section class="why-choose-us" aria-label="Why Choose Us">
+      <div class="wc-container">
+        <h3 class="section-title">Why Choose Us</h3>
+    
+        <div class="choose-item">
+          <img src="images/card-1.png" alt="Top Residential Sales">
+          <div class="text">
+            <h4>Top Residential Sales Last 5 Years</h4>
+            <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! From fixer-uppers to luxury homes, we handle it all with care and expertise.</p>
+          </div>
+        </div>
+    
+        <div class="choose-item reverse">
+          <img src="images/card-2.png" alt="Don't Just List it">
+          <div class="text">
+            <h4>Don’t Just List it...</h4>
+            <p>Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer — getting you top dollar for your home.</p>
+          </div>
+        </div>
+    
+        <div class="choose-item">
+          <img src="images/card-3.png" alt="Guide to Buyers">
+          <div class="text">
+            <h4>Guide to Buyers</h4>
+            <p>Nobody knows the market like we do. Enjoy having a pro at your service — market analysis, upgrade lists, contractors on speed dial, and more!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <img src="images/listing-bg.jpg" alt="Find your dream home background" class="listing-bg">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2 class="dream-heading">Find Your Dream Home</h2>
+    
+        <div class="search-box">
+          <h3>Search Listings</h3>
+          <form class="search-form">
+            <div class="form-group wide">
+              <label>Location</label>
+              <input type="text" placeholder="Enter city, neighborhood, or ZIP" />
+            </div>
+            <div class="form-group wide">
+              <label>Type</label>
+              <select>
+                <option>Any Type</option>
+                <option>House</option>
+                <option>Condo</option>
+                <option>Townhome</option>
+              </select>
+            </div>
+            <div class="form-group wide">
+              <label>Sort By</label>
+              <select>
+                <option>Newest Listings</option>
+                <option>Lowest Price</option>
+                <option>Highest Price</option>
+              </select>
+            </div>
+            <div class="form-group small">
+              <label>Bedrooms</label>
+              <select>
+                <option>Any Number</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+              </select>
+            </div>
+            <div class="form-group small">
+              <label>Baths</label>
+              <select>
+                <option>Any Number</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+              </select>
+            </div>
+            <div class="form-group small">
+              <label>Min Price</label>
+              <input type="text" placeholder="Min" />
+            </div>
+            <div class="form-group small">
+              <label>Max Price</label>
+              <input type="text" placeholder="Max" />
+            </div>
+            <div class="search-button small">
+              <button type="submit">Search Now</button>
+            </div>
+          </form>
+        </div>
+      </div>     
+    </section>    
+
+    <section class="affiliations-carousel">
+      <div class="carousel-track">
+        <img src="images/logo-1.png" alt="The Ridge Realty Group">
+        <img src="images/logo-2.png" alt="Equal Housing Opportunity">
+        <img src="images/logo-3.png" alt="Realtor">
+        <img src="images/logo-4.png" alt="Pahrump Valley Chamber of Commerce">
+        
+        <img src="images/logo-1.png" alt="The Ridge Realty Group">
+        <img src="images/logo-2.png" alt="Equal Housing Opportunity">
+        <img src="images/logo-3.png" alt="Realtor">
+        <img src="images/logo-4.png" alt="Pahrump Valley Chamber of Commerce">
+
+        <img src="images/logo-1.png" alt="The Ridge Realty Group">
+        <img src="images/logo-2.png" alt="Equal Housing Opportunity">
+        <img src="images/logo-3.png" alt="Realtor">
+        <img src="images/logo-4.png" alt="Pahrump Valley Chamber of Commerce">
+
+        <img src="images/logo-1.png" alt="The Ridge Realty Group">
+        <img src="images/logo-2.png" alt="Equal Housing Opportunity">
+        <img src="images/logo-3.png" alt="Realtor">
+        <img src="images/logo-4.png" alt="Pahrump Valley Chamber of Commerce">
+      </div>
+    </section>
+
+    <section class="photo-gallery" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Photo Gallery</h2>
+    
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/gallery-1.jpg" alt="Gallery Photo 1">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-2.jpg" alt="Gallery Photo 2">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-3.jpg" alt="Gallery Photo 3">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-4.jpg" alt="Gallery Photo 4">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-5.jpg" alt="Gallery Photo 5">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-7.jpg" alt="Gallery Photo 6">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-services" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="images/rs-icon.png" alt="Real Estate Icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Real Estate Done Right</h3>
+            <p>
+              Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!
+            </p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="images/comres-icon.png" alt="Real Estate Icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3>Commercial & Residential</h3>
+            <p>
+              Large or small, condo or mansion, we can find it and get it at the price that's right. Fixer-uppers? Luxury? We can help with all of it!
+              We live, work, and play in this community — happy to help you find where to put your hard-earned dollars.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="images/rely-icon.png" alt="Real Estate Icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Rely on Expertise</h3>
+            <p>
+              If you have questions about affordability, credit, or loan options, trust us to connect you with the right people to get the answers you need. We make sure you feel confident and educated every step of the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <section class="office-contact-wrap">
+      <div class="office">
+        <h4>Office Hours</h4>
+        <p><strong>Open today</strong> 08:00 am – 07:00 pm</p>
+        <p><strong>Open daily</strong> 8:00 am - 7:00 pm</p>
+        <p>Appointments outside office hours available upon request. Just call!</p>
+      </div>
+    
+      <div class="contact-form">
+        <h3 style="margin-top:0">Send Us a Message</h3>
+        <form id="contactForm" novalidate>
+          <label>Name<input name="name" required></label>
+          <label>Email*<input name="email" type="email" required></label>
+          <label>Message<textarea name="message"></textarea></label>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps?q=3190+HW-160+Suite+F,+Pahrump,+Nevada+89048&output=embed"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+  
+      <!-- Contact info -->
+      <div class="footer-contact" id="contact">
+        <h3>Contact Us</h3>
+        <p>3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+        <p><a href="tel:+12069196886">(206) 919-6886</a></p>
+      </div>
+  
+      <!-- Socials -->
+      <div class="footer-socials">
+        <a href="#" title="Facebook" aria-label="Facebook">
+          <img src="images/fb-icon.png" alt="Facebook Icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" title="Instagram" aria-label="Instagram">
+          <img src="images/ig-icon.png" alt="Instagram Icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+          <img src="images/linkedin-icon.png" alt="LinkedIn Icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" title="Yelp" aria-label="Yelp">
+          <img src="images/yelp-icon.png" alt="Yelp Icon">
+          <i class="fab fa-yelp"></i>
+        </a>
+        <a href="https://wa.me/12069196886" title="WhatsApp" aria-label="WhatsApp" target="_blank">
+          <img src="images/whatsapp-icon.png" alt="WhatsApp Icon">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+  
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 MARCI METZGER HOMES. ALL RIGHTS RESERVED.</p>
+        <p class="powered">Powered by GoDaddy Airo</p>
+      </div>
+  
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

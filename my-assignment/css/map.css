@@ -1,0 +1,28 @@
+/* === MAP SECTION WRAPPER === */
+.map-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    height: 450px;
+    border-top: 3px solid var(--accent);
+    border-bottom: 3px solid var(--accent);
+  }
+  
+  /* === IFRAME STYLING === */
+  .map-section iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+  }
+  
+  /* === RESPONSIVE FIXES === */
+  @media (max-width: 600px) {
+    .map-section {
+      height: 350px;
+    }
+  }

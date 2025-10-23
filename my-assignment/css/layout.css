@@ -1,0 +1,206 @@
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    gap: 1.5rem;
+  }
+  
+  .left-controls {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  
+  /* Logo styling */
+.logo-img {
+    height: 70px;
+    object-fit: contain;
+  }
+  
+  /* Hamburger (white at start, turns dark after scroll) */
+.hamburger {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+  }
+  
+  .hamburger span,
+  .hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.9); /* off-white */
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); /* subtle shadow for visibility */
+    transition: background 0.3s ease;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  .hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background: rgba(0,0,0,0.5); /* more visible lines */
+    border-radius: 2px;
+    transition: background 0.3s ease;
+  }
+
+  
+/* === HEADER SCROLL EFFECT === */
+body.scrolled .site-header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+body.scrolled .hamburger .bar {
+  background: #000;
+}
+  
+/* === FOOTER === */
+.site-footer {
+    background: #0b0b0b;
+    color: #ddd;
+    padding: 60px 20px 40px;
+    text-align: center;
+  }
+  
+  .footer-inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Footer contact info */
+  .footer-contact {
+    text-align: center;
+  }
+  .footer-contact h3 {
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .footer-contact p {
+    margin: 4px 0;
+    color: #ccc;
+    font-size: 1rem;
+  }
+  .footer-contact a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-contact a:hover {
+    color: var(--accent);
+  }
+  
+  /* Footer socials */
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+  }
+  .footer-socials a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .footer-socials a img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .footer-socials a:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: scale(1.1);
+  }
+  .footer-socials a:hover img {
+    transform: scale(1.1);
+    filter: brightness(100%) invert(1);
+  }
+  
+  /* Footer bottom area */
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .footer-bottom p {
+    color: #bdbdbd;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 4px 0;
+  }
+  .footer-bottom .powered {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  
+  /* === RESPONSIVE HEADER + FOOTER === */
+  @media (max-width: 600px) {
+    .site-header {
+      height: 5rem;
+    }
+    .logo-img {
+      height: 55px;
+    }
+  
+    .footer-socials a {
+      width: 44px;
+      height: 44px;
+      font-size: 1.1rem;
+    }
+    .footer-contact h3 {
+      font-size: 1.5rem;
+    }
+  }

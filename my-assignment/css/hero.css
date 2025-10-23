@@ -1,0 +1,103 @@
+/* === HERO SECTION === */
+.hero {
+    position: sticky;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  /* === BACKGROUND IMAGE === */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/hero-bg.png'); /* adjust to your actual file */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* keeps image fixed on scroll */
+    filter: brightness(0.95);
+    transition: filter 0.4s ease;
+  }
+  
+  /* Overlay gradient for text readability */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+    pointer-events: none;
+  }
+  
+  /* === HERO CONTENT === */
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .kicker {
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  
+  .hero-title {
+    font-family: "Cinzel", serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin: 10px 0;
+  }
+  
+  .hero-sub {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    margin-bottom: 25px;
+  }
+  
+  /* === CALL NOW BUTTON === */
+  .call-now {
+    background: rgb(171,133,133);
+    color: #fff;
+    border: none;
+    padding: 14px 38px;
+    border-radius: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .call-now:hover {
+    background: rgb(151,113,113);
+  }
+  
+  /* === RESPONSIVE HERO === */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      background-attachment: scroll;
+    }
+    .hero-bg {
+      background-attachment: scroll;
+      background-position: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      height: 60vh;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+    }
+    .call-now {
+      width: 100%;
+      padding: 12px 0;
+    }
+  }
